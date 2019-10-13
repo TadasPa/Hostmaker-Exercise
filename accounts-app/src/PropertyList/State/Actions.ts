@@ -10,8 +10,7 @@ export class PropertyListActions {
   
   static setLoadingInProgress() {
     return {
-      type: PropertyListActionTypes.LOADING_IN_PROGRESS,
-      isLoading: true
+      type: PropertyListActionTypes.LOADING_IN_PROGRESS
     };
   }
 
@@ -25,7 +24,7 @@ export class PropertyListActions {
   static setLoadError(value: any) {
     return {
       type: PropertyListActionTypes.DATA_LOAD_ERROR,
-      error: value
+      loadError: value
     };
   }
 
@@ -34,12 +33,12 @@ export class PropertyListActions {
       dispatch(PropertyListActions.setLoadingInProgress());
       const propertyList = await PropertyListAPI.retrievePropertyList();
       if (!propertyList) {
-        dispatch(PropertyListActions.setLoadError("Property list data loading error, please try again by refreshing the page."));
+        dispatch(PropertyListActions.setLoadError("Property list loading error occured, please try again by refreshing the page."));
       }
       else {
         dispatch(PropertyListActions.setPropertyList(propertyList));
       }
-    };
+    }
   }
 }
 

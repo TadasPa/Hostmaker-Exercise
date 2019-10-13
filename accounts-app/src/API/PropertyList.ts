@@ -18,7 +18,7 @@ class PropertyListAPI {
           return serverList;
         },
           error => {
-            return [];
+            return null;
           });
       }    
 

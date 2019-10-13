@@ -1,18 +1,42 @@
 import React, { Component } from "react";
-import './PropertyList.css'; 
+import './PropertyList.css';
+import { connect } from "react-redux";
+import { PropertyListState } from "./State/Reducer"
+import { PropertyListActions } from "./State/Actions";
+import { PropertyListPresentation, IPropertyListPresentationProps } from "./Presentation/PropertyList";
 
-class PropertyListContainer extends Component {
-    constructor(props: any) {
-        super(props);
-    }
+class PropertyListContainer extends Component<IPropertyListPresentationProps> {
 
     render() {
         return (
-            <div className="property-list">
-                ttttttttttt
+            <div className="property-list-container">
+                <PropertyListPresentation
+                    isLoading={this.props.isLoading}
+                    propertyList={this.props.propertyList}
+                    loadError={this.props.loadError}
+                    fetchData={this.props.fetchData} />
             </div>
         );
     }
 }
 
-export default PropertyListContainer
+const mapStateToProps = (state: { PropertyList: PropertyListState }) => {
+    return {
+        isLoading: state.PropertyList.isLoading,
+        propertyList: state.PropertyList.propertyList,
+        loadError: state.PropertyList.loadError
+    }
+}
+
+const mapDispatchToProps = (dispatch: any) => {
+    return {
+        fetchData: () => {
+            dispatch(PropertyListActions.fetchData());
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(PropertyListContainer)
