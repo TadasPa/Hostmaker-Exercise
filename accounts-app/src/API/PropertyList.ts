@@ -14,8 +14,8 @@ class PropertyListAPI {
           if (httpResponse.status !== 200) {
             return [];
           }
-          const serverList = httpResponse.json();
-          return serverList;
+          const propertyList = httpResponse.json();
+          return propertyList;
         },
           error => {
             return null;

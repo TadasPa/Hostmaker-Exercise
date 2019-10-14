@@ -1,0 +1,20 @@
+.service-area-marker-unknow-state {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(156, 153, 148);
+  border-radius: 1rem;
+}
+
+.service-area-marker-servicable {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(23, 235, 164);
+  border-radius: 1rem;
+}
+
+.service-area-marker-not-servicable {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(197, 37, 63);
+  border-radius: 1rem;
+}

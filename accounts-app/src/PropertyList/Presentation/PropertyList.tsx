@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import './PropertyList.scss';
 import { PropertyListState } from "../State/Reducer";
 import LoadingSpinner from "../../LoadingSpinner/LoadingSpinner";
+import AuthenticationError from "../../AuthenticationError/AuthenticationError"
+import ServiceAreaMarker from "../../ServiceAreaMarker/ServiceAreaMarker"
 
 export interface IPropertyListPresentationProps extends PropertyListState {
     fetchData: () => void
@@ -32,14 +34,14 @@ export class PropertyListPresentation extends Component<IPropertyListPresentatio
                     <div className="property-item-income-generated">
                         {property.incomeGenerated}
                     </div>
+                    <ServiceAreaMarker address={property.address} />
                 </div>
             );
         });
 
         return (
             <div className="property-list-presentation-container">
-                
-                <div className="property-item-row-title">
+                {propertyList.length > 0 && <div className="property-item-row-title">
                     <div className="property-item-owner">
                         Owner
                     </div>
@@ -49,10 +51,9 @@ export class PropertyListPresentation extends Component<IPropertyListPresentatio
                     <div className="property-item-income-generated">
                         Income generated
                     </div>
-                </div>
-                
+                </div>}
                 <LoadingSpinner isLoading={this.props.isLoading} />
-                {this.props.loadError && this.props.loadError}
+                <AuthenticationError error={this.props.loadError} />
                 {propertyList}
             </div>
         );

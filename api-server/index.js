@@ -11,6 +11,20 @@ app.use(function(req, res, next) {
 app.get('/', (req, res) => res.send(
     [
       {
+        "owner": "33 miles away",
+        "address": {
+            "line1": "",
+            "line4": "",
+            "postCode": "SG4 7JD",
+            "city": "London",
+            "country": "U.K."
+        },
+        "airbnbId": 3512503,
+        "numberOfBedrooms": 1,
+        "numberOfBathrooms": 1,
+        "incomeGenerated": 2000.34
+      },
+      {
         "owner": "carlos",
         "address": {
             "line1": "Flat 5",

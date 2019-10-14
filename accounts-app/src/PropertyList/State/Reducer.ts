@@ -1,8 +1,6 @@
 import { PropertyListActionTypes } from "./Actions"
 
-export interface Property {
-  owner: string;
-  address: {
+export interface IAddress {
     line1?: string;
     line2?: string;
     line3?: string;
@@ -10,7 +8,11 @@ export interface Property {
     postCode?: string;
     city?: string;
     country?: string;
-  };
+  }
+
+export interface IProperty {
+  owner: string;
+  address: IAddress;
   airbnbId: number;
   numberOfBedrooms: number;
   numberOfBathrooms: number;
@@ -19,7 +21,7 @@ export interface Property {
 
 export class PropertyListState  {
   isLoading = false;
-  propertyList: Property[] = [];
+  propertyList: IProperty[] = [];
   loadError = "";
 };
 
