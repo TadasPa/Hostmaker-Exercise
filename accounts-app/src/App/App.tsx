@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import './App.scss';
 import PropertyListContainer from "../PropertyList/PropertyList"
 
 class App extends Component {

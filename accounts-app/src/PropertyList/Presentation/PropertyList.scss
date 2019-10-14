@@ -1,0 +1,42 @@
+.property-list-presentation-container {
+    padding: 10rem;
+}
+
+.property-item-row {
+    display: flex;
+    border-top-style: solid;
+    border-color: #9fd533;
+    border-width: 2px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.property-item-row-title {
+    display: flex;    
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-weight: 700;
+    color: #9fd533;
+}
+
+.property-item-owner {
+    width: 30rem;
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-start;
+}
+
+.property-item-address {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10rem;
+}
+
+.property-item-income-generated {
+    width: 30rem;
+    justify-content: flex-start;
+    display: flex;
+    align-items: flex-start;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './PropertyList.css';
+import './PropertyList.scss';
 import { connect } from "react-redux";
 import { PropertyListState } from "./State/Reducer"
 import { PropertyListActions } from "./State/Actions";
