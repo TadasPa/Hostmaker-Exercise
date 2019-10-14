@@ -1,12 +1,13 @@
 .property-list-presentation-container {
-    padding: 10rem;
+    padding: 1rem;
+    color: rgba(73,73,80,.8);
 }
 
 .property-item-row {
     display: flex;
     border-top-style: solid;
-    border-color: #9fd533;
-    border-width: 2px;
+    border-color: #2ca9a5;
+    border-width: 0.01rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -15,8 +16,9 @@
     display: flex;    
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-weight: 700;
-    color: #9fd533;
+    //font-weight: 700;
+    color: #494950;
+    opacity: .7;
 }
 
 .property-item-owner {
@@ -39,4 +41,15 @@
     justify-content: flex-start;
     display: flex;
     align-items: flex-start;
+}
+
+.section-title {
+    color: #333;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.property-table {
+    padding-left: 6rem;
+    padding-right: 6rem;
 }

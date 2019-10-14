@@ -41,20 +41,27 @@ export class PropertyListPresentation extends Component<IPropertyListPresentatio
 
         return (
             <div className="property-list-presentation-container">
-                {propertyList.length > 0 && <div className="property-item-row-title">
-                    <div className="property-item-owner">
-                        Owner
+                {!this.props.isLoading && <div>
+                    <img src="https://hostmaker-website.imgix.net/assets/images/logos/hostmaker-logo.svg?auto=compress%2Cformat&fit=crop&ixlib=react-8.4.0&h=38&w=200" />
+                </div>
+                }
+                {propertyList.length > 0 && <div className="property-table">
+                    <div className="property-item-row-title">
+                        <div className="property-item-owner">
+                            Owner
                     </div>
-                    <div className="property-item-address">
-                        Address
+                        <div className="property-item-address">
+                            Address
                     </div>
-                    <div className="property-item-income-generated">
-                        Income generated
+                        <div className="property-item-income-generated">
+                            Income generated
                     </div>
-                </div>}
+                    </div>
+                    {propertyList}
+                </div>
+                }
                 <LoadingSpinner isLoading={this.props.isLoading} />
                 <AuthenticationError error={this.props.loadError} />
-                {propertyList}
             </div>
         );
     }
