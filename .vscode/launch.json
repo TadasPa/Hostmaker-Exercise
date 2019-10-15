@@ -10,7 +10,7 @@
           "test",
           "--runInBand",
           "--no-cache",
-          "--watchAll=false"
+          "--watchAll=true"
         ],
         "cwd": "${workspaceRoot}/accounts-app",
         "protocol": "inspector",

@@ -5,7 +5,7 @@ import { PropertyListState } from "./State/Reducer"
 import { PropertyListActions } from "./State/Actions";
 import { PropertyListPresentation, IPropertyListPresentationProps } from "./Presentation/PropertyList";
 
-class PropertyListContainer extends Component<IPropertyListPresentationProps> {
+export class PropertyListContainer extends Component<IPropertyListPresentationProps> {
 
     render() {
         return (

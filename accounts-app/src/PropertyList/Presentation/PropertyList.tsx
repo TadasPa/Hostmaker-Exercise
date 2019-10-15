@@ -42,10 +42,10 @@ export class PropertyListPresentation extends Component<IPropertyListPresentatio
         return (
             <div className="property-list-presentation-container">
                 {!this.props.isLoading && <div>
-                    <img src="https://hostmaker-website.imgix.net/assets/images/logos/hostmaker-logo.svg?auto=compress%2Cformat&fit=crop&ixlib=react-8.4.0&h=38&w=200" />
+                    <img alt="Hostmaker logo" src="https://hostmaker-website.imgix.net/assets/images/logos/hostmaker-logo.svg?auto=compress%2Cformat&fit=crop&ixlib=react-8.4.0&h=38&w=200" />
                 </div>
                 }
-                {propertyList.length > 0 && <div className="property-table">
+                {!this.props.isLoading && propertyList.length > 0 && <div className="property-table">
                     <div className="property-item-row-title">
                         <div className="property-item-owner">
                             Owner

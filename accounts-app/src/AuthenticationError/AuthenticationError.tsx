@@ -5,7 +5,7 @@ export interface IAuthenticationErrorProps {
     error: string;
 }
 
-class AuthenticationError extends Component<IAuthenticationErrorProps> {
+export class AuthenticationError extends Component<IAuthenticationErrorProps> {
 
     render() {
         return (

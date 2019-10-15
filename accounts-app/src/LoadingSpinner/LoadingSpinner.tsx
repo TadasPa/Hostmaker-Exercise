@@ -5,7 +5,7 @@ export interface ILoadingSpinnerProps {
   isLoading: boolean;
 }
 
-class LoadingSpinner extends Component<ILoadingSpinnerProps> {
+export class LoadingSpinner extends Component<ILoadingSpinnerProps> {
 
   render() {
     if (this.props.isLoading) {

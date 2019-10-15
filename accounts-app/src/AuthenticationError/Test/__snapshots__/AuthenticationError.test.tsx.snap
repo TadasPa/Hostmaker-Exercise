@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error renders correctly when no error to show 1`] = `""`;
+
+exports[`Error renders correctly when there is error to show 1`] = `
+<div
+  className="error-message"
+>
+   
+  Error, please try again.
+   
+</div>
+`;
