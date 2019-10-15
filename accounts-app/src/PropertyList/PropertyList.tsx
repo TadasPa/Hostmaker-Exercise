@@ -21,6 +21,7 @@ class PropertyListContainer extends Component<IPropertyListPresentationProps> {
 }
 
 const mapStateToProps = (state: { PropertyList: PropertyListState }) => {
+    
     return {
         isLoading: state.PropertyList.isLoading,
         propertyList: state.PropertyList.propertyList,
