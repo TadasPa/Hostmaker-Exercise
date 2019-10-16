@@ -7,7 +7,7 @@ it('renders without crashing', () => {
      shallow(<PropertyListContainer isLoading={false} propertyList={[]} loadError={""} fetchData={()=>{}} />);
 });
 
-it('bahaves when loading even with data', () => {
+it('render defaults', () => {
      const propertyList = [
           {
                "owner": "33 miles away",
@@ -24,8 +24,8 @@ it('bahaves when loading even with data', () => {
                "incomeGenerated": 2000.34
              }
      ];
-     const propertyListPresentation = renderer
-          .create(<PropertyListPresentation isLoading={true} propertyList={propertyList} loadError={""} fetchData={jest.fn()} />)
+     const propertyListContainer = renderer
+          .create(<PropertyListContainer isLoading={false} propertyList={propertyList} loadError={""} fetchData={jest.fn()} />)
           .toJSON();
-     expect(propertyListPresentation).toMatchSnapshot();
+     expect(propertyListContainer).toMatchSnapshot();
 });

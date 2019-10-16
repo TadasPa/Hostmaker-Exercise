@@ -12,7 +12,7 @@ class PropertyListAPI {
           }
         }).then(httpResponse => {
           if (httpResponse.status !== 200) {
-            return [];
+            return null;
           }
           const propertyList = httpResponse.json();
           return propertyList;
